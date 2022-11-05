@@ -1,0 +1,14 @@
+html
+    head
+        title Security test 
+    body
+        if checked === "xssAttack"
+           h1 !{toDisplay}
+        else
+            h1 #{toDisplay}
+        form(action="/query",method="POST")
+            label(for="xssAttack") Cross site scripting
+            input#xssAttack(type="checkbox", name="xssAttack" value="xssAttack")
+            br
+            label(for="query") Type something to enlarge
+            input#query(type="text", name="query")
